@@ -7,38 +7,44 @@
 	<title></title>
 </head>
 <body>
-	<div class="nav">
-		<div class="menu"> 
-			<div class="leftItem">
-			<a href="#">Gourmet au Catering</a>
+	<nav></nav>
+	<div class="navBlock">
+		<div class="navBar"> 
+			<div class="logo">
+			<a class="menuItem" href="#">Gourmet au Catering</a>
 		</div>
-		<div class="rightItems">
-			<a href="#about">About</a>
-			<a href="#menu">Menu</a>
-			<a href="#">Contact</a>
+		<div class="menuBar">
+			<a class="menuItem" href="#about">About</a>
+			<a class="menuItem" href="#menu">Menu</a>
+			<a class="menuItem" href="#">Contact</a>
 		</div>
 </div>
 </div>
 </nav>
-<div class="MainPicture">
-	<img class="MainPicture" src="photos/Italian-Pasta.jpg"><span class="img-text">Le Catering</span>
+
+<div class="mainPictureBlock">
+	<img class="mainPicture" src="photos/Italian-Pasta.jpg"><span class="pictureText">Le Catering</span>
 </div>
 	</header>
-	<div class="article">
-		<div class="box1" id="about">
-			<img class="img-box1" src="photos/burger.jpg">
-			<div class="text-box1">
-		<div class="main-text"><h1>About Catering</h1></div>
-		<div class="small-text"><p>Tradition since 1889</p></div>
-			    <p>The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span style="background-color:#D3D3D3">seasonal</span> ingredients.</p>
-				<p style="margin-top:30px;"><span style="color:#C0C0C0">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+	<div class="content">
+		<div class="aboutBox" id="about">
+			<img class="img-aboutBox" src="photos/burger.jpg">
+			<div class="aboutBox-text">
+		<div class="aboutBox-header"><h1>About Catering</h1></div>
+		<div class="aboutBox-paragraph"><p>Tradition since 1889</p></div>
+			    <p>The Catering was founded in blabla by Mr.
+					 Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					 Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					 We only use <a class="opnBtn">seasonal ingredients.</a></p>
+				<p style="margin-top:30px;"><span style="color:#808080">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 				</span></p>
 			</div>
 		</div>
+		
 		<hr>
 		<div class="boxMenu">
-			
-			<div class="text-boxMenu" id="menu">
+			<div class="menu-list" id="menu">
 				<h1 class="main-text">Our menu</h1>
 				<h4>Bread Basket</h4>
 				<p>Assortment of fresh baked fruit breads and muffins 5.50</p>
@@ -54,7 +60,7 @@
 			<img class="img-boxMenu" src="photos/pizza.jpg">
 			</div>
 			<hr>
-			<div class="boxForm">
+			<div class="formBlock">
 				<div class="textForm">
 				<h1>Contact new</h1>
 				<p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
@@ -67,7 +73,7 @@
 			    		<input type="number" id="quantity" name="quantity" min="1" max="150" placeholder="How many people?" required>
 			    		<input type="date" id="time" min = "2021-01-16"required >
 			    		<input type="textarea" placeholder="Message/Special requirements" required>
-			    		<input type="submit">
+			    		<input class ="subButton" type="submit" value="SUBMIT">
 			       </form>
         </div>
        </div>
@@ -77,5 +83,27 @@
 					<p>Powered by<a href="#">Tolka</a></p>
 				</div>
 			</div>
+			<div class="fixed-overlay">
+				<div class="modal">
+			<div class="modal_container">
+				<div class="seasonList">
+					<h3>Summer</h1>
+						
+				</div>
+				<div class="seasonList">
+					<h3>Auotumn</h1>
+				</div>
+				<div class="seasonList">
+					<h3>Winter</h3>
+				</div>
+				<div class="seasonList">
+					<h3>Spring</h3>
+				</div>
+				<div class="clsBtn"><button class="btn">x</button></div>
+			</div>
+			</div>
+			</div>
+			<script src="MiniProject.js"></script>
+
 		</body>
 </html>
