@@ -1,14 +1,18 @@
 *{
 	box-sizing: border-box;
 }
+::-webkit-scrollbar {
+	width: 0;}
+::-webkit-scrollbar-thumb{
+	background-color:#A9A9A9;
+}
 body{
-
-	font-family:Georgia;
-	margin:0;
-	display: grid;
-	grid-template-areas: 'nav'
-	                    'art1'
-	                    'foot';
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0;
+	font-family: Georgia;
+	position: relative;
 }
 h4,h1{
 	margin-bottom: 0px;
@@ -16,9 +20,8 @@ h4,h1{
 	padding:0 16px;
 	letter-spacing: 5px;
 }
-.nav{
+.navBlock{
 	z-index: 1;
-	grid-area: nav;
 	position: fixed;
 	top:0;
 	width:100%;
@@ -28,62 +31,55 @@ h4,h1{
 	line-height: 54px;
 	background-color:white;
 }
-a{
-	padding:5px 10px;
+.navBar{
+	display:flex;
+	flex-direction:row;
+	justify-content: space-between;
+}
+.menuItem{
+	padding:18px 10px;
 	text-decoration: none;
 	color:#000000;
 }
-a:hover{
+.menuItem:hover{
 	background-color:#DCDCDC;
 	transition: 1s;
 }
 hr{
 	border:none;
-	/*width:1100px;*/
 	background-color:#DCDCDC;
 	height: 1px;
     margin-top:20px;
     margin-bottom: 50px;
     width:1100px;
 }
-.leftItem{
-	position:absolute;
-	left:16px;
-	text-align:center;
-}
-.rightItems{
-	position:absolute;
-	right:16px;
-	float:right;
-}
-.MainPicture{
+.mainPictureBlock,.mainPicture{
+	position:relative;
+	height:900px;
+	width:100%;
 	margin:auto;
 	opacity: 0.8;
 	margin-bottom: 40px;
-	/*max-width:1600px;*/
-	width:100%;
-	position:relative;
 }
-.img-text{
+.pictureText{
 	position:absolute;
-	bottom:90px;
-	left:40px;
-	font-size:36px;
-	color:black;
+	bottom:80px;
+	left:30px;
+	font-size:75px;
+	color:rgb(241, 232, 205);
 	letter-spacing: 4px;
 	}
-.article{
-	grid-area: art1;
+.content{
 	width:100%;
 	}
-.box1,.boxMenu,.boxForm{
+.aboutBox,.boxMenu,.formBlock{
 	width:1100px;
 	height:780px;/* 780*/
 	margin:auto;
-	
 	position:relative;
 }
-.img-box1{
+.img-aboutBox{
+	height: 600px ;
 	position: absolute;
 	left:16px;
 	width:45.5%;
@@ -91,35 +87,35 @@ hr{
 	opacity: 0.8;
 	border-radius: 5px;
 }
-.text-box1,.text-boxMenu{
+.aboutBox-text,.menu-list{
 	width:45.5%;
 	height:700px;
 	margin:16px;
-	text-align:left;
+	text-align:justify;
     padding:16px;
 	font-size: 18px;
 	line-height: 1.5;
 	}
-.text-boxMenu p{
+.menu-list p{
 	padding:0 16px;
 	color:#808080;
 	font-size: 16px;
 }
-.text-box1{
+.aboutBox-text{
 	position:absolute;
 	right:16px;
 }
-.main-text{
+.aboutBox-header{
 	text-align:center;
 	margin:23px;
 	}
-.small-text{
+.aboutBox-paragraph{
 	text-align: center;
 	margin:30px 0 0 10px;
 }
 .img-boxMenu{
 	width:45.5%;
-	height: 700px;
+	height: 600px;
 	position:absolute;
 	top:0;
 	right:16px;
@@ -127,7 +123,7 @@ hr{
 	opacity: 0.8;
 	border-radius: 5px;
 }
-.boxForm h1{
+.formBlock h1{
 	text-align:left;
 	margin:50px 0px 50px 16px;
 }
@@ -147,7 +143,7 @@ hr{
 	padding:0 16px;
 }
 input{
-font-size:18px;
+ 	font-size:18px;
 	border:none;
 	border-bottom: 1px solid #A9A9A9;
 	padding:15px 10px;
@@ -162,6 +158,17 @@ font-size:18px;
 	padding: 10px 16px;
 	text-align: left;
 	box-sizing: border-box;
+}
+.subButton{
+    font-weight: bold;
+	border-bottom: none;
+	background-color: #DCDCDC;
+	
+}
+.subButton:hover{
+	background-color:#C0C0C0;
+	color:white;
+	cursor: pointer;
 }
 .footer{
 	grid-area: foot;
@@ -186,4 +193,47 @@ font-size:18px;
 	color:#D3D3D3;
 	border-radius: 5px;
 	text-decoration: none;
+}
+.fixed-overlay {
+	display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -380px;
+    margin-top: -275px;
+	
+}
+.modal_container {
+    background-color: #fff;
+    width: 800px;
+    height: 550px;
+	text-align: center;
+	display:flex;
+	flex-direction: column;
+	justify-content:space-between;
+	padding:30px;
+}
+.seasonList{
+	
+	text-align: center;
+}
+
+.opnBtn{
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.clsMod{
+	display:none;
+}
+.opnMod{
+	display:block;
 }
